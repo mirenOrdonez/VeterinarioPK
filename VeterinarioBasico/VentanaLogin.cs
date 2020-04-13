@@ -12,6 +12,8 @@ namespace VeterinarioBasico
 {
     public partial class VentanaLogin : Form
     {
+        Conexion conexion = new Conexion();
+
         public VentanaLogin()
         {
             InitializeComponent();
@@ -19,7 +21,12 @@ namespace VeterinarioBasico
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            String resultado = conexion.loginCliente(username.Text, password.Text);
+            
+            VentanaPrincipal v = new VentanaPrincipal();
+            v.Show();
+            
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
