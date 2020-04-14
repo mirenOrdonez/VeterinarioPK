@@ -24,7 +24,7 @@ namespace VeterinarioBasico
 
         }
 
-        public String loginCliente(String dni, String password)
+        public Boolean loginCliente(String dni, String password)
         {
             try
             {
@@ -37,16 +37,46 @@ namespace VeterinarioBasico
 
                 if (resultado.Read())
                 {
-                    return resultado.GetString(1);
+                    return true;
                 }
 
                 conexion.Close();
-                return "Usuario o contraseña erróneos.";
+                return false;
             }
 
             catch (MySqlException e)
             {
-                return "Error.";
+                return false;
+            }
+        }
+
+        public Boolean registraUsuario(String dni, String nombreCliente, String apellido1, String apellido2,
+                                        String direccion, String telefono, String email, String usuario, String password)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO cliente (dni, nombreCliente, apellido1, " +
+                    "apellido2, direccion, telefono, email, usuario, password) VALUES (@dni, @nombreCliente, @apellido1," +
+                    "@apellido2, @direccion, @telefono, @email, @usuario, @password)", conexion);
+                consulta.Parameters.AddWithValue("@dni", dni);
+                consulta.Parameters.AddWithValue("@nombreCliente", nombreCliente);
+                consulta.Parameters.AddWithValue("@apellido1", apellido1);
+                consulta.Parameters.AddWithValue("@apellido2", apellido2);
+                consulta.Parameters.AddWithValue("@direccion", direccion);
+                consulta.Parameters.AddWithValue("@telefono", telefono);
+                consulta.Parameters.AddWithValue("@email", email);
+                consulta.Parameters.AddWithValue("@usuario", usuario);
+                consulta.Parameters.AddWithValue("@password", password);
+
+                consulta.ExecuteNonQuery();
+
+                conexion.Close();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                return false;
             }
         }
     }

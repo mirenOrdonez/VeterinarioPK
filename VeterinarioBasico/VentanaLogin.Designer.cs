@@ -79,7 +79,6 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(221, 30);
             this.password.TabIndex = 3;
-            this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.password.UseSystemPasswordChar = true;
             // 
             // button1

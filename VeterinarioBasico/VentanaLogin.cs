@@ -21,10 +21,17 @@ namespace VeterinarioBasico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String resultado = conexion.loginCliente(username.Text, password.Text);
+            if (conexion.loginCliente(username.Text, password.Text))
+            {
+                this.Hide();
+                VentanaPrincipal v = new VentanaPrincipal();
+                v.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña erróneos.");
+            }
             
-            VentanaPrincipal v = new VentanaPrincipal();
-            v.Show();
             
             
         }

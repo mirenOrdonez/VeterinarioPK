@@ -34,22 +34,22 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.username = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nombreCliente = new System.Windows.Forms.TextBox();
+            this.apellido1 = new System.Windows.Forms.TextBox();
+            this.apellido2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.dni = new System.Windows.Forms.TextBox();
+            this.telefono = new System.Windows.Forms.TextBox();
+            this.direccion = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.usuario = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,29 +120,29 @@
             this.label6.Text = "DIRECCIÓN";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // username
+            // nombreCliente
             // 
-            this.username.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(610, 217);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(221, 30);
-            this.username.TabIndex = 14;
+            this.nombreCliente.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreCliente.Location = new System.Drawing.Point(610, 217);
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.Size = new System.Drawing.Size(221, 30);
+            this.nombreCliente.TabIndex = 14;
             // 
-            // textBox1
+            // apellido1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(547, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 30);
-            this.textBox1.TabIndex = 15;
+            this.apellido1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido1.Location = new System.Drawing.Point(547, 286);
+            this.apellido1.Name = "apellido1";
+            this.apellido1.Size = new System.Drawing.Size(163, 30);
+            this.apellido1.TabIndex = 15;
             // 
-            // textBox2
+            // apellido2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(716, 286);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 30);
-            this.textBox2.TabIndex = 16;
+            this.apellido2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido2.Location = new System.Drawing.Point(716, 286);
+            this.apellido2.Name = "apellido2";
+            this.apellido2.Size = new System.Drawing.Size(163, 30);
+            this.apellido2.TabIndex = 16;
             // 
             // label2
             // 
@@ -168,29 +168,29 @@
             this.label7.Text = "TELÉFONO";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // dni
             // 
-            this.textBox3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(547, 355);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 30);
-            this.textBox3.TabIndex = 19;
+            this.dni.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dni.Location = new System.Drawing.Point(547, 355);
+            this.dni.Name = "dni";
+            this.dni.Size = new System.Drawing.Size(163, 30);
+            this.dni.TabIndex = 19;
             // 
-            // textBox4
+            // telefono
             // 
-            this.textBox4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(716, 355);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 30);
-            this.textBox4.TabIndex = 20;
+            this.telefono.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefono.Location = new System.Drawing.Point(716, 355);
+            this.telefono.Name = "telefono";
+            this.telefono.Size = new System.Drawing.Size(163, 30);
+            this.telefono.TabIndex = 20;
             // 
-            // textBox5
+            // direccion
             // 
-            this.textBox5.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(547, 424);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(332, 30);
-            this.textBox5.TabIndex = 21;
+            this.direccion.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccion.Location = new System.Drawing.Point(547, 424);
+            this.direccion.Name = "direccion";
+            this.direccion.Size = new System.Drawing.Size(332, 30);
+            this.direccion.TabIndex = 21;
             // 
             // label8
             // 
@@ -204,13 +204,13 @@
             this.label8.Text = "EMAIL";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox6
+            // email
             // 
-            this.textBox6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(547, 493);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(332, 30);
-            this.textBox6.TabIndex = 23;
+            this.email.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(547, 493);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(332, 30);
+            this.email.TabIndex = 23;
             // 
             // label9
             // 
@@ -234,22 +234,22 @@
             this.label10.Text = "NOMBRE DE USUARIO";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox7
+            // usuario
             // 
-            this.textBox7.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(547, 599);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(332, 30);
-            this.textBox7.TabIndex = 26;
+            this.usuario.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuario.Location = new System.Drawing.Point(547, 599);
+            this.usuario.Name = "usuario";
+            this.usuario.Size = new System.Drawing.Size(332, 30);
+            this.usuario.TabIndex = 26;
             // 
-            // textBox8
+            // password
             // 
-            this.textBox8.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(547, 666);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(332, 30);
-            this.textBox8.TabIndex = 27;
-            this.textBox8.UseSystemPasswordChar = true;
+            this.password.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.password.Location = new System.Drawing.Point(547, 666);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(332, 30);
+            this.password.TabIndex = 27;
+            this.password.UseSystemPasswordChar = true;
             // 
             // label11
             // 
@@ -263,20 +263,20 @@
             this.label11.Text = "CONTRASEÑA";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
+            // registrar
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(610, 712);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 53);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "REGISTRARME";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.registrar.BackColor = System.Drawing.Color.Teal;
+            this.registrar.FlatAppearance.BorderSize = 0;
+            this.registrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrar.Location = new System.Drawing.Point(610, 712);
+            this.registrar.Name = "registrar";
+            this.registrar.Size = new System.Drawing.Size(199, 53);
+            this.registrar.TabIndex = 29;
+            this.registrar.Text = "REGISTRARME";
+            this.registrar.UseVisualStyleBackColor = false;
+            this.registrar.Click += new System.EventHandler(this.registrar_Click);
             // 
             // VentanaRegistro
             // 
@@ -284,22 +284,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
             this.ClientSize = new System.Drawing.Size(1387, 855);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.registrar);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.usuario);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.email);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.direccion);
+            this.Controls.Add(this.telefono);
+            this.Controls.Add(this.dni);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.username);
+            this.Controls.Add(this.apellido2);
+            this.Controls.Add(this.apellido1);
+            this.Controls.Add(this.nombreCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -325,21 +325,21 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nombreCliente;
+        private System.Windows.Forms.TextBox apellido1;
+        private System.Windows.Forms.TextBox apellido2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox dni;
+        private System.Windows.Forms.TextBox telefono;
+        private System.Windows.Forms.TextBox direccion;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox email;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox usuario;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registrar;
     }
 }

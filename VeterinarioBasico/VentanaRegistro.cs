@@ -12,15 +12,24 @@ namespace VeterinarioBasico
 {
     public partial class VentanaRegistro : Form
     {
+        Conexion conexion = new Conexion();
+
         public VentanaRegistro()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registrar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Datos enviados correctamente. Validaremos tu cuenta en breves momentos y " +
-                " te enviaremos un email de confirmación.");
+
+            if (conexion.registraUsuario(dni.Text, nombreCliente.Text, apellido1.Text, apellido2.Text,
+                direccion.Text, telefono.Text, email.Text, usuario.Text, password.Text))
+            {
+                MessageBox.Show("Registro completado. Debe validarse la cuenta para poder ingresar.");
+                this.Hide();
+                VentanaLogin v = new VentanaLogin();
+                v.Show();
+            }
         }
     }
 }
