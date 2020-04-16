@@ -23,6 +23,13 @@ namespace VeterinarioBasico
             InitializeComponent();
         }
 
+        //Método para que se cierre la aplicación cuando se cierre la V.ppal
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.WindowsShutDown) return;
+                Application.Exit();
+        }
+
         private Image convierteBlobAImagen(byte[] img)
         {
             MemoryStream ms = new System.IO.MemoryStream(img);
