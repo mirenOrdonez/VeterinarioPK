@@ -20,12 +20,13 @@ namespace VeterinarioBasico
 
         String usuarioLogin;
 
-        public VentanaPrincipalCliente(String usuarioQueHaceLogin)
+        public VentanaPrincipalCliente(String clienteQueHaceLogin)
         {
             InitializeComponent();
-            usuarioLogin = usuarioQueHaceLogin;
+            usuarioLogin = clienteQueHaceLogin;
             muestraDatosCliente();
             muestraDatosMascota();
+            dataGridView1.DataSource = conexion.datosCitas(clienteQueHaceLogin);
 
         }
 
@@ -68,6 +69,12 @@ namespace VeterinarioBasico
         private void button9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Suscripción realizada correctamente. Se enviará mensualmente nuestra revista a su domicilio.");
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            VentanaPago v = new VentanaPago();
+            v.Show();
         }
     }
 }

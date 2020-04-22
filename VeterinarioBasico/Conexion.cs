@@ -155,6 +155,47 @@ namespace VeterinarioBasico
                 throw e;
             }
         }
+
+        public DataTable datosTrabajador(String usuario)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM trabajador WHERE usuarioTrabajador = @usuario", conexion);
+                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable datos = new DataTable();
+                datos.Load(resultado);
+                conexion.Close();
+                return datos;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        public DataTable datosCitas(String usuario)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT fechaConsulta, horaConsulta FROM `mascota_consulta` " +
+                    "WHERE fechaConsulta >= " +
+                    "CURRENT_DATE AND idMascota = (SELECT idMascota FROM cliente_mascota WHERE dni = " +
+                    "(SELECT dni FROM cliente WHERE usuario = @usuario))", conexion);
+                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable datos = new DataTable();
+                datos.Load(resultado);
+                conexion.Close();
+                return datos;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
 
 }

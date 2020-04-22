@@ -31,6 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipalCliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.apellido2 = new System.Windows.Forms.Label();
+            this.direccion = new System.Windows.Forms.Label();
+            this.email = new System.Windows.Forms.Label();
+            this.apellido1 = new System.Windows.Forms.Label();
+            this.nombre = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -45,32 +55,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.apellido2 = new System.Windows.Forms.Label();
-            this.direccion = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.Label();
-            this.apellido1 = new System.Windows.Forms.Label();
-            this.nombre = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -79,7 +80,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.HotTrack = true;
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.ItemSize = new System.Drawing.Size(300, 35);
@@ -89,6 +90,125 @@
             this.tabControl1.Size = new System.Drawing.Size(1388, 766);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.button6);
+            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.button9);
+            this.tabPage1.Controls.Add(this.button8);
+            this.tabPage1.Controls.Add(this.button7);
+            this.tabPage1.Controls.Add(this.apellido2);
+            this.tabPage1.Controls.Add(this.direccion);
+            this.tabPage1.Controls.Add(this.email);
+            this.tabPage1.Controls.Add(this.apellido1);
+            this.tabPage1.Controls.Add(this.nombre);
+            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.ImageIndex = 1;
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1380, 723);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Mi perfil";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button6.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(165, 648);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(238, 34);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Editar perfil";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button9.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(831, 364);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(386, 118);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "SUSCRÍBETE A NUESTRA REVISTA MENSUAL";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button8.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(831, 218);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(386, 118);
+            this.button8.TabIndex = 8;
+            this.button8.Text = "FACTURAS";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
+            this.button7.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(831, 82);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(386, 118);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "MÉTODOS DE PAGO";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // apellido2
+            // 
+            this.apellido2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.apellido2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido2.Location = new System.Drawing.Point(291, 345);
+            this.apellido2.Name = "apellido2";
+            this.apellido2.Size = new System.Drawing.Size(182, 36);
+            this.apellido2.TabIndex = 5;
+            this.apellido2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // direccion
+            // 
+            this.direccion.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.direccion.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccion.Location = new System.Drawing.Point(93, 477);
+            this.direccion.Name = "direccion";
+            this.direccion.Size = new System.Drawing.Size(380, 36);
+            this.direccion.TabIndex = 4;
+            this.direccion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // email
+            // 
+            this.email.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.email.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.email.Location = new System.Drawing.Point(93, 407);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(380, 36);
+            this.email.TabIndex = 3;
+            this.email.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // apellido1
+            // 
+            this.apellido1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.apellido1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido1.Location = new System.Drawing.Point(93, 345);
+            this.apellido1.Name = "apellido1";
+            this.apellido1.Size = new System.Drawing.Size(182, 36);
+            this.apellido1.TabIndex = 2;
+            this.apellido1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nombre
+            // 
+            this.nombre.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.nombre.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombre.Location = new System.Drawing.Point(181, 288);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(202, 36);
+            this.nombre.TabIndex = 1;
+            this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage2
             // 
@@ -216,11 +336,11 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.tableLayoutPanel1);
             this.tabPage3.ForeColor = System.Drawing.Color.White;
             this.tabPage3.ImageIndex = 0;
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
@@ -237,7 +357,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.button1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(530, 398);
+            this.button1.Location = new System.Drawing.Point(378, 582);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(414, 50);
             this.button1.TabIndex = 4;
@@ -251,7 +371,7 @@
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.button2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(530, 454);
+            this.button2.Location = new System.Drawing.Point(378, 654);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(414, 50);
             this.button2.TabIndex = 3;
@@ -269,25 +389,6 @@
             this.label5.Text = "PRÓXIMAS CITAS";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Black;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(323, 166);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.27586F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.72414F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 204);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -296,132 +397,6 @@
             this.imageList1.Images.SetKeyName(1, "icons8_customer_1.ico");
             this.imageList1.Images.SetKeyName(2, "icons8_dog.ico");
             this.imageList1.Images.SetKeyName(3, "icons8_dog_paw.ico");
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.button6);
-            this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.button9);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.apellido2);
-            this.tabPage1.Controls.Add(this.direccion);
-            this.tabPage1.Controls.Add(this.email);
-            this.tabPage1.Controls.Add(this.apellido1);
-            this.tabPage1.Controls.Add(this.nombre);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.ImageIndex = 1;
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1380, 723);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mi perfil";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button9.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(831, 364);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(386, 118);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "SUSCRÍBETE A NUESTRA REVISTA MENSUAL";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button8.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(831, 218);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(386, 118);
-            this.button8.TabIndex = 8;
-            this.button8.Text = "FACTURAS";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button7.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(831, 82);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(386, 118);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "MÉTODOS DE PAGO";
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // apellido2
-            // 
-            this.apellido2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.apellido2.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido2.Location = new System.Drawing.Point(291, 345);
-            this.apellido2.Name = "apellido2";
-            this.apellido2.Size = new System.Drawing.Size(182, 36);
-            this.apellido2.TabIndex = 5;
-            this.apellido2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // direccion
-            // 
-            this.direccion.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.direccion.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccion.Location = new System.Drawing.Point(93, 477);
-            this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(380, 36);
-            this.direccion.TabIndex = 4;
-            this.direccion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // email
-            // 
-            this.email.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.email.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(93, 407);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(380, 36);
-            this.email.TabIndex = 3;
-            this.email.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // apellido1
-            // 
-            this.apellido1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.apellido1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido1.Location = new System.Drawing.Point(93, 345);
-            this.apellido1.Name = "apellido1";
-            this.apellido1.Size = new System.Drawing.Size(182, 36);
-            this.apellido1.TabIndex = 2;
-            this.apellido1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nombre
-            // 
-            this.nombre.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.nombre.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombre.Location = new System.Drawing.Point(181, 288);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(202, 36);
-            this.nombre.TabIndex = 1;
-            this.nombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 82);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(202, 178);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(81, 64);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(202, 171);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -433,6 +408,16 @@
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(181, 82);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 178);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::VeterinarioBasico.Properties.Resources.logovet;
@@ -442,6 +427,15 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(81, 64);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(202, 171);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -453,16 +447,13 @@
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
             // 
-            // button6
+            // dataGridView1
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(165, 648);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(238, 34);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Editar perfil";
-            this.button6.UseVisualStyleBackColor = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(355, 168);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(710, 228);
+            this.dataGridView1.TabIndex = 12;
             // 
             // VentanaPrincipalCliente
             // 
@@ -479,14 +470,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PK Vet";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,7 +497,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label apellido2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
@@ -525,6 +516,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

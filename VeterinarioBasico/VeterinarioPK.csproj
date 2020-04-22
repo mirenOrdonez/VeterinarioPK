@@ -72,6 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="VentanaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPago.Designer.cs">
+      <DependentUpon>VentanaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPrincipalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="VentanaRegistro.Designer.cs">
       <DependentUpon>VentanaRegistro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaPago.resx">
+      <DependentUpon>VentanaPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipalCliente.resx">
       <DependentUpon>VentanaPrincipalCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\visaMastercard.png" />
     <None Include="Resources\logovet.png" />
     <None Include="Resources\logo.png" />
   </ItemGroup>

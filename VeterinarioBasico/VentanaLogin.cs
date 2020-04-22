@@ -14,7 +14,6 @@ namespace VeterinarioBasico
     public partial class VentanaLogin : Form
     {
         Conexion conexion = new Conexion();
-        DataTable misDatos = new DataTable();
 
 
         public VentanaLogin()
@@ -33,7 +32,7 @@ namespace VeterinarioBasico
             else if (conexion.loginTrabajador(username.Text, password.Text))
             {
                 this.Hide();
-                VentanaPrincipalTrabajador v = new VentanaPrincipalTrabajador();
+                VentanaPrincipalTrabajador v = new VentanaPrincipalTrabajador(username.Text);
                 v.Show();
             }
             else
