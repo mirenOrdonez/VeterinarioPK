@@ -55,6 +55,37 @@ namespace VeterinarioBasico
             }
         }
 
+        public Boolean loginTrabajador(String usuarioTrabajador, String passwordTrabajador)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM trabajador WHERE usuarioTrabajador = @usuarioTrabajador", conexion);
+                consulta.Parameters.AddWithValue("@usuarioTrabajador", usuarioTrabajador);
+
+                MySqlDataReader resultado = consulta.ExecuteReader();
+
+                if (resultado.Read())
+                {
+                    string passConHash = resultado.GetString("passwordTrabajador");
+                    if (BCrypt.Net.BCrypt.Verify(passwordTrabajador, passConHash))
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+
+                conexion.Close();
+                return false;
+            }
+
+            catch (MySqlException e)
+            {
+                return false;
+            }
+        }
+
+
         public Boolean registraUsuario(String dni, String nombreCliente, String apellido1, String apellido2,
                                         String direccion, String telefono, String email, String usuario, String password)
         {
@@ -103,5 +134,27 @@ namespace VeterinarioBasico
                 throw e;
             }
         }
+
+        public DataTable datosMascota(String usuario)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM `mascota` WHERE idMascota = " +
+                    "(SELECT idMascota FROM cliente_mascota WHERE dni = (SELECT dni FROM cliente " +
+                    "WHERE usuario = @usuario))", conexion);
+                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable datos = new DataTable();
+                datos.Load(resultado);
+                conexion.Close();
+                return datos;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
     }
+
 }

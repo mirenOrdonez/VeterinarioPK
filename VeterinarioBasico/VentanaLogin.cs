@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace VeterinarioBasico
     public partial class VentanaLogin : Form
     {
         Conexion conexion = new Conexion();
+        DataTable misDatos = new DataTable();
+
 
         public VentanaLogin()
         {
@@ -24,7 +27,13 @@ namespace VeterinarioBasico
             if (conexion.loginCliente(username.Text, password.Text))
             {
                 this.Hide();
-                VentanaPrincipal v = new VentanaPrincipal();
+                VentanaPrincipalCliente v = new VentanaPrincipalCliente(username.Text);
+                v.Show();
+            }
+            else if (conexion.loginTrabajador(username.Text, password.Text))
+            {
+                this.Hide();
+                VentanaPrincipalTrabajador v = new VentanaPrincipalTrabajador();
                 v.Show();
             }
             else
@@ -32,22 +41,31 @@ namespace VeterinarioBasico
                 MessageBox.Show("Usuario o contraseña erróneos.");
             }
             
-            
-            
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        //Para que se muestre la contraseña o no.
+        private void button3_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked = true)
+            if (password.UseSystemPasswordChar == false)
+            {
+                password.UseSystemPasswordChar = true;
+            }
+            else
             {
                 password.UseSystemPasswordChar = false;
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             VentanaRegistro v = new VentanaRegistro();
             v.Show();
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

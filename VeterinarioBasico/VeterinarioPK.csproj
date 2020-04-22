@@ -72,11 +72,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
-    <Compile Include="VentanaPrincipal.cs">
+    <Compile Include="VentanaPrincipalCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaPrincipal.Designer.cs">
-      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    <Compile Include="VentanaPrincipalCliente.Designer.cs">
+      <DependentUpon>VentanaPrincipalCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,14 +86,20 @@
     <Compile Include="VentanaLogin.Designer.cs">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="VentanaPrincipalTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPrincipalTrabajador.Designer.cs">
+      <DependentUpon>VentanaPrincipalTrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentanaRegistro.Designer.cs">
       <DependentUpon>VentanaRegistro.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="VentanaPrincipal.resx">
-      <DependentUpon>VentanaPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaPrincipalCliente.resx">
+      <DependentUpon>VentanaPrincipalCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="VentanaLogin.resx">
       <DependentUpon>VentanaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPrincipalTrabajador.resx">
+      <DependentUpon>VentanaPrincipalTrabajador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaRegistro.resx">
       <DependentUpon>VentanaRegistro.cs</DependentUpon>
@@ -133,6 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+    <None Include="Resources\logovet.png" />
+    <None Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
