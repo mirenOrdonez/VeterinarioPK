@@ -72,6 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="VentanaNuevaCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaNuevaCita.Designer.cs">
+      <DependentUpon>VentanaNuevaCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     <Compile Include="VentanaRegistro.Designer.cs">
       <DependentUpon>VentanaRegistro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaNuevaCita.resx">
+      <DependentUpon>VentanaNuevaCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPago.resx">
       <DependentUpon>VentanaPago.cs</DependentUpon>
     </EmbeddedResource>

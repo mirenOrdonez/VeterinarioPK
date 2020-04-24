@@ -26,7 +26,10 @@ namespace VeterinarioBasico
             usuarioLogin = clienteQueHaceLogin;
             muestraDatosCliente();
             muestraDatosMascota();
-            dataGridView1.DataSource = conexion.datosCitas(clienteQueHaceLogin);
+            dataGridView1.DataSource = conexion.citasCliente(clienteQueHaceLogin);
+            //Ajustar la tabla al contenido. 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
         }
 
@@ -43,7 +46,7 @@ namespace VeterinarioBasico
             return (Image.FromStream(ms));
         }
 
-        public void muestraDatosCliente()
+        private void muestraDatosCliente()
         {
             misDatos = conexion.datosCliente(usuarioLogin);
             nombre.Text = misDatos.Rows[0]["nombreCliente"].ToString();
@@ -54,7 +57,7 @@ namespace VeterinarioBasico
             direccion.Text = misDatos.Rows[0]["direccion"].ToString();
         }
 
-        public void muestraDatosMascota()
+        private void muestraDatosMascota()
         {
             miMascota = conexion.datosMascota(usuarioLogin);
             nombreMascota.Text = miMascota.Rows[0]["nombreMascota"].ToString();
@@ -74,6 +77,12 @@ namespace VeterinarioBasico
         private void button7_Click(object sender, EventArgs e)
         {
             VentanaPago v = new VentanaPago();
+            v.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            VentanaNuevaCita v = new VentanaNuevaCita();
             v.Show();
         }
     }

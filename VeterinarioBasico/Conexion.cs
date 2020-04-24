@@ -175,15 +175,37 @@ namespace VeterinarioBasico
             }
         }
 
-        public DataTable datosCitas(String usuario)
+
+        //Para el buscador del trabajador
+        public DataTable buscarMascota()
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT fechaConsulta, horaConsulta FROM `mascota_consulta` " +
-                    "WHERE fechaConsulta >= " +
-                    "CURRENT_DATE AND idMascota = (SELECT idMascota FROM cliente_mascota WHERE dni = " +
-                    "(SELECT dni FROM cliente WHERE usuario = @usuario))", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT idMascota, nombreMascota, " +
+                    "tipo, raza FROM mascota", conexion);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable datos = new DataTable();
+                datos.Load(resultado);
+                conexion.Close();
+                return datos;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        //Que muestre las citas del cliente
+        public DataTable citasCliente(String usuario)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT `fechaConsulta`, `horaConsulta` FROM " +
+                    "`mascota_consulta` WHERE fechaConsulta > CURRENT_DATE AND idMascota = " +
+                    "(SELECT idMascota FROM cliente_mascota WHERE dni = (SELECT dni FROM cliente " +
+                    "WHERE usuario = @usuario))", conexion);
                 consulta.Parameters.AddWithValue("@usuario", usuario);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
@@ -196,6 +218,7 @@ namespace VeterinarioBasico
                 throw e;
             }
         }
+
     }
 
 }

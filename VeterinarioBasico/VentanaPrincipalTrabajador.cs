@@ -15,13 +15,19 @@ namespace VeterinarioBasico
     {
         Conexion conexion = new Conexion();
         DataTable misDatos = new DataTable();
+        
 
         String usuarioLogin;
+
         public VentanaPrincipalTrabajador(String trabajadorQueHaceLogin)
         {
             InitializeComponent();
             usuarioLogin = trabajadorQueHaceLogin;
             mostrarDatosTrabajador();
+            dataGridView1.DataSource = conexion.buscarMascota();
+            //Para ajustar las dimensiones de la tabla
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
         //Método para que se cierre la aplicación cuando se cierre la V.ppal
@@ -37,6 +43,7 @@ namespace VeterinarioBasico
             return (Image.FromStream(ms));
         }
 
+        //Método que muestra los datos del trabajador. TABCONTROL 1= "MI PERFIL"
         public void mostrarDatosTrabajador()
         {
             misDatos = conexion.datosTrabajador(usuarioLogin);
@@ -44,6 +51,15 @@ namespace VeterinarioBasico
             nombreTrabajador.Text = misDatos.Rows[0]["nombreTrabajador"].ToString();
             apellido1Trabajador.Text = misDatos.Rows[0]["apellido1Trabajador"].ToString();
             apellido2Trabajador.Text = misDatos.Rows[0]["apellido2Trabajador"].ToString();
+        }
+
+        
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nombreMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["nombreMascota"].Value.ToString();
+            pictureBox5.Image = convierteBlobAImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagenMascota"].Value);
+            edadMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["fecNacimiento"].Value.ToString();
+            razaMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["raza"].Value.ToString();
         }
     }
 }
