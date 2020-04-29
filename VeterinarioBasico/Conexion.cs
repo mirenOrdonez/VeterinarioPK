@@ -26,20 +26,21 @@ namespace VeterinarioBasico
 
         }
 
-        public Boolean loginCliente(String usuario, String password)
+        //LOGIN CLIENTE.
+        public Boolean loginCliente(String usuarioCliente, String passwordCliente)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente WHERE usuario = @usuario", conexion);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente WHERE usuarioCliente = @usuarioCliente", conexion);
+                consulta.Parameters.AddWithValue("@usuarioCliente", usuarioCliente);
 
                 MySqlDataReader resultado = consulta.ExecuteReader();
 
                 if (resultado.Read())
                 {
-                    string passConHash = resultado.GetString("password");
-                    if (BCrypt.Net.BCrypt.Verify(password, passConHash)) {
+                    string passConHash = resultado.GetString("passwordCliente");
+                    if (BCrypt.Net.BCrypt.Verify(passwordCliente, passConHash)) {
                         return true;
                     }
                     return false;
@@ -55,6 +56,7 @@ namespace VeterinarioBasico
             }
         }
 
+        //LOGIN TRABAJADOR.
         public Boolean loginTrabajador(String usuarioTrabajador, String passwordTrabajador)
         {
             try
@@ -85,25 +87,27 @@ namespace VeterinarioBasico
             }
         }
 
-
-        public Boolean registraUsuario(String dni, String nombreCliente, String apellido1, String apellido2,
-                                        String direccion, String telefono, String email, String usuario, String password)
+        //REGISTRO NUEVO USUARIO (SÓLO PARA CLIENTES)
+        public Boolean registraUsuario(String dniCliente, String nombreCliente, String apellido1Cliente, String apellido2Cliente,
+                                        String direccionCliente, String telfCliente, String emailCliente, String usuarioCliente, 
+                                        String passwordCliente)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO cliente (dni, nombreCliente, apellido1, " +
-                    "apellido2, direccion, telefono, email, usuario, password) VALUES (@dni, @nombreCliente, @apellido1," +
-                    "@apellido2, @direccion, @telefono, @email, @usuario, @password)", conexion);
-                consulta.Parameters.AddWithValue("@dni", dni);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO cliente (dniCliente, nombreCliente, apellido1Cliente, " +
+                    "apellido2Cliente, direccionCliente, telfCliente, emailCliente, usuarioCliente, passwordCliente) VALUES " +
+                    "(@dniCliente, @nombreCliente, @apellido1Cliente, @apellido2Cliente, @direccionCliente, " +
+                    "@telfCliente, @emailCliente, @usuarioCliente, @passwordCliente)", conexion);
+                consulta.Parameters.AddWithValue("@dniCliente", dniCliente);
                 consulta.Parameters.AddWithValue("@nombreCliente", nombreCliente);
-                consulta.Parameters.AddWithValue("@apellido1", apellido1);
-                consulta.Parameters.AddWithValue("@apellido2", apellido2);
-                consulta.Parameters.AddWithValue("@direccion", direccion);
-                consulta.Parameters.AddWithValue("@telefono", telefono);
-                consulta.Parameters.AddWithValue("@email", email);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
-                consulta.Parameters.AddWithValue("@password", password);
+                consulta.Parameters.AddWithValue("@apellido1Cliente", apellido1Cliente);
+                consulta.Parameters.AddWithValue("@apellido2Cliente", apellido2Cliente);
+                consulta.Parameters.AddWithValue("@direccionCliente", direccionCliente);
+                consulta.Parameters.AddWithValue("@telfCliente", telfCliente);
+                consulta.Parameters.AddWithValue("@emailCliente", emailCliente);
+                consulta.Parameters.AddWithValue("@usuarioCliente", usuarioCliente);
+                consulta.Parameters.AddWithValue("@passwordCliente", passwordCliente);
 
                 consulta.ExecuteNonQuery();
 
@@ -116,13 +120,14 @@ namespace VeterinarioBasico
             }
         }
 
+        //Para el TABCONTROL "Mi perfil" del CLIENTE.
         public DataTable datosCliente(String usuario)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente WHERE usuario = @usuario", conexion);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM cliente WHERE usuarioCliente = @usuarioCliente", conexion);
+                consulta.Parameters.AddWithValue("@usuarioCliente", usuario);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
                 datos.Load(resultado);
@@ -135,15 +140,16 @@ namespace VeterinarioBasico
             }
         }
 
+        //Para el TABCONTROL "Mi mascota" del CLIENTE.
         public DataTable datosMascota(String usuario)
         {
             try
             {
                 conexion.Open();
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM `mascota` WHERE idMascota = " +
-                    "(SELECT idMascota FROM cliente_mascota WHERE dni = (SELECT dni FROM cliente " +
-                    "WHERE usuario = @usuario))", conexion);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
+                    "(SELECT idMascota FROM cliente_mascota WHERE dniCliente = (SELECT dniCliente FROM cliente " +
+                    "WHERE usuarioCliente = @usuarioCliente))", conexion);
+                consulta.Parameters.AddWithValue("@usuarioCliente", usuario);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
                 datos.Load(resultado);
@@ -156,13 +162,15 @@ namespace VeterinarioBasico
             }
         }
 
+        //Para el TABCONTROL "Mi perfil" del TRABAJADOR.
         public DataTable datosTrabajador(String usuario)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM trabajador WHERE usuarioTrabajador = @usuario", conexion);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM trabajador WHERE usuarioTrabajador " +
+                    "= @usuarioTrabajador", conexion);
+                consulta.Parameters.AddWithValue("@usuarioTrabajador", usuario);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
                 datos.Load(resultado);
@@ -176,14 +184,15 @@ namespace VeterinarioBasico
         }
 
 
-        //Para el buscador del trabajador
+        //Para el TABCONTROL "buscador" del TRABAJADOR
         public DataTable buscarMascota()
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT idMascota, nombreMascota, " +
-                    "tipo, raza FROM mascota", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT nombreMascota as Mascota, especieMascota as Especie, " +
+                    "razaMascota as Raza, colorMascota as Color, fecNacMascota as 'Fecha de nacimiento' , " +
+                    "imagenMascota as Imagen FROM mascota", conexion);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
                 datos.Load(resultado);
@@ -196,17 +205,18 @@ namespace VeterinarioBasico
             }
         }
 
-        //Que muestre las citas del cliente
+        //Para el TABCONTROL "Mis citas" del CLIENTE
         public DataTable citasCliente(String usuario)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT `fechaConsulta`, `horaConsulta` FROM " +
-                    "`mascota_consulta` WHERE fechaConsulta > CURRENT_DATE AND idMascota = " +
-                    "(SELECT idMascota FROM cliente_mascota WHERE dni = (SELECT dni FROM cliente " +
-                    "WHERE usuario = @usuario))", conexion);
-                consulta.Parameters.AddWithValue("@usuario", usuario);
+                MySqlCommand consulta = new MySqlCommand("SELECT DATE_FORMAT(fechaConsulta, '%d-%m-%Y') " +
+                    "as Fecha, TIME_FORMAT(horaConsulta, '%H:%i') as Hora, tipoConsulta as Servicio " +
+                    "FROM `consulta` as c, mascota_consulta as mc WHERE c.idConsulta = mc.idConsulta " +
+                    "AND mc.idMascota = (SELECT idMascota FROM `cliente_mascota` WHERE dniCliente = " +
+                    "(SELECT dniCliente FROM cliente WHERE usuarioCliente = @usuarioCliente))", conexion);
+                consulta.Parameters.AddWithValue("@usuarioCliente", usuario);
                 MySqlDataReader resultado = consulta.ExecuteReader();
                 DataTable datos = new DataTable();
                 datos.Load(resultado);
@@ -218,6 +228,56 @@ namespace VeterinarioBasico
                 throw e;
             }
         }
+
+        //Para el TABCONTROL "Citas" del TRABAJADOR
+        public DataTable citasTrabajador(String usuario)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("SELECT DATE_FORMAT(fechaConsulta, '%d-%m-%Y') as Fecha, " +
+                    "TIME_FORMAT(horaConsulta, '%H:%i') as Hora FROM mascota_consulta as mc, consulta_trabajador as ct " +
+                    "WHERE ct.dniTrabajador = (SELECT dniTrabajador FROM trabajador WHERE usuarioTrabajador = @usuarioTrabajador) " +
+                    "AND mc.idConsulta = ct.idConsulta AND mc.fechaConsulta >= CURRENT_DATE ORDER BY mc.fechaConsulta", conexion);
+                consulta.Parameters.AddWithValue("@usuarioTrabajador", usuario);
+                MySqlDataReader resultado = consulta.ExecuteReader();
+                DataTable datos = new DataTable();
+                datos.Load(resultado);
+                conexion.Close();
+                return datos;
+            }
+            catch (MySqlException e)
+            {
+                throw e;
+            }
+        }
+
+        //Registro nueva mascota
+        //public Boolean registraMascota(String nombreMascota, String especieMascota, String razaMascota,
+        //                String colorMascota, String fecNacMascota)
+        //{
+        //    try
+        //    {
+        //        conexion.Open();
+        //        MySqlCommand consulta = new MySqlCommand("INSERT INTO mascota (nombreMascota," +
+        //            "especieMascota, razaMascota, colorMascota, fecNacMascota) VALUES (@nombreMascota," +
+        //            "@especieMascota, @razaMascota, @colorMascota, @fecNacMascota)", conexion);
+        //        consulta.Parameters.AddWithValue("@nombreMascota", nombreMascota);
+        //        consulta.Parameters.AddWithValue("@especieMascota", especieMascota);
+        //        consulta.Parameters.AddWithValue("@razaMascota", razaMascota);
+        //        consulta.Parameters.AddWithValue("@colorMascota", colorMascota);
+        //        consulta.Parameters.AddWithValue("@fecNacMascota", fecNacMascota);
+
+        //        consulta.ExecuteNonQuery();
+
+        //        conexion.Close();
+        //        return true;
+        //    }
+        //    catch (MySqlException e)
+        //    {
+        //        return false;
+        //    }
+        //}
 
     }
 

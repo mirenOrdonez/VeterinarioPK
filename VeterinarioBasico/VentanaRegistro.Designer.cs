@@ -33,19 +33,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.nombreCliente = new System.Windows.Forms.TextBox();
-            this.apellido1 = new System.Windows.Forms.TextBox();
-            this.apellido2 = new System.Windows.Forms.TextBox();
+            this.apellido1Cliente = new System.Windows.Forms.TextBox();
+            this.apellido2Cliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dni = new System.Windows.Forms.TextBox();
-            this.telefono = new System.Windows.Forms.TextBox();
-            this.direccion = new System.Windows.Forms.TextBox();
+            this.dniCliente = new System.Windows.Forms.TextBox();
+            this.telfCliente = new System.Windows.Forms.TextBox();
+            this.direccionCliente = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.TextBox();
+            this.emailCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.usuario = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
+            this.usuarioCliente = new System.Windows.Forms.TextBox();
+            this.passwordCliente = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.registrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -119,25 +119,25 @@
             this.nombreCliente.Size = new System.Drawing.Size(209, 22);
             this.nombreCliente.TabIndex = 14;
             // 
-            // apellido1
+            // apellido1Cliente
             // 
-            this.apellido1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.apellido1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.apellido1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido1.Location = new System.Drawing.Point(489, 254);
-            this.apellido1.Name = "apellido1";
-            this.apellido1.Size = new System.Drawing.Size(209, 22);
-            this.apellido1.TabIndex = 15;
+            this.apellido1Cliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.apellido1Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.apellido1Cliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido1Cliente.Location = new System.Drawing.Point(489, 254);
+            this.apellido1Cliente.Name = "apellido1Cliente";
+            this.apellido1Cliente.Size = new System.Drawing.Size(209, 22);
+            this.apellido1Cliente.TabIndex = 15;
             // 
-            // apellido2
+            // apellido2Cliente
             // 
-            this.apellido2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.apellido2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.apellido2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido2.Location = new System.Drawing.Point(720, 254);
-            this.apellido2.Name = "apellido2";
-            this.apellido2.Size = new System.Drawing.Size(207, 22);
-            this.apellido2.TabIndex = 16;
+            this.apellido2Cliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.apellido2Cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.apellido2Cliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellido2Cliente.Location = new System.Drawing.Point(720, 254);
+            this.apellido2Cliente.Name = "apellido2Cliente";
+            this.apellido2Cliente.Size = new System.Drawing.Size(207, 22);
+            this.apellido2Cliente.TabIndex = 16;
             // 
             // label2
             // 
@@ -163,35 +163,35 @@
             this.label7.Text = "TELÉFONO";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dni
+            // dniCliente
             // 
-            this.dni.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dni.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dni.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dni.Location = new System.Drawing.Point(489, 322);
-            this.dni.Name = "dni";
-            this.dni.Size = new System.Drawing.Size(209, 22);
-            this.dni.TabIndex = 19;
+            this.dniCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dniCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dniCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dniCliente.Location = new System.Drawing.Point(489, 322);
+            this.dniCliente.Name = "dniCliente";
+            this.dniCliente.Size = new System.Drawing.Size(209, 22);
+            this.dniCliente.TabIndex = 19;
             // 
-            // telefono
+            // telfCliente
             // 
-            this.telefono.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.telefono.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefono.Location = new System.Drawing.Point(720, 322);
-            this.telefono.Name = "telefono";
-            this.telefono.Size = new System.Drawing.Size(207, 22);
-            this.telefono.TabIndex = 20;
+            this.telfCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.telfCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.telfCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telfCliente.Location = new System.Drawing.Point(720, 322);
+            this.telfCliente.Name = "telfCliente";
+            this.telfCliente.Size = new System.Drawing.Size(207, 22);
+            this.telfCliente.TabIndex = 20;
             // 
-            // direccion
+            // direccionCliente
             // 
-            this.direccion.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.direccion.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccion.Location = new System.Drawing.Point(489, 392);
-            this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(438, 22);
-            this.direccion.TabIndex = 21;
+            this.direccionCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.direccionCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.direccionCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionCliente.Location = new System.Drawing.Point(489, 392);
+            this.direccionCliente.Name = "direccionCliente";
+            this.direccionCliente.Size = new System.Drawing.Size(438, 22);
+            this.direccionCliente.TabIndex = 21;
             // 
             // label8
             // 
@@ -205,15 +205,15 @@
             this.label8.Text = "EMAIL";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // email
+            // emailCliente
             // 
-            this.email.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.email.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(489, 460);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(438, 22);
-            this.email.TabIndex = 23;
+            this.emailCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.emailCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.emailCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailCliente.Location = new System.Drawing.Point(489, 460);
+            this.emailCliente.Name = "emailCliente";
+            this.emailCliente.Size = new System.Drawing.Size(438, 22);
+            this.emailCliente.TabIndex = 23;
             // 
             // label9
             // 
@@ -237,26 +237,26 @@
             this.label10.Text = "NOMBRE DE USUARIO";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // usuario
+            // usuarioCliente
             // 
-            this.usuario.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.usuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usuario.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuario.Location = new System.Drawing.Point(489, 566);
-            this.usuario.Name = "usuario";
-            this.usuario.Size = new System.Drawing.Size(438, 22);
-            this.usuario.TabIndex = 26;
+            this.usuarioCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.usuarioCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.usuarioCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioCliente.Location = new System.Drawing.Point(489, 566);
+            this.usuarioCliente.Name = "usuarioCliente";
+            this.usuarioCliente.Size = new System.Drawing.Size(438, 22);
+            this.usuarioCliente.TabIndex = 26;
             // 
-            // password
+            // passwordCliente
             // 
-            this.password.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.password.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password.Location = new System.Drawing.Point(487, 633);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(440, 22);
-            this.password.TabIndex = 27;
-            this.password.UseSystemPasswordChar = true;
+            this.passwordCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.passwordCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.passwordCliente.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordCliente.Location = new System.Drawing.Point(487, 633);
+            this.passwordCliente.Name = "passwordCliente";
+            this.passwordCliente.Size = new System.Drawing.Size(440, 22);
+            this.passwordCliente.TabIndex = 27;
+            this.passwordCliente.UseSystemPasswordChar = true;
             // 
             // label11
             // 
@@ -403,19 +403,19 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.registrar);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.usuario);
+            this.Controls.Add(this.passwordCliente);
+            this.Controls.Add(this.usuarioCliente);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.email);
+            this.Controls.Add(this.emailCliente);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.direccion);
-            this.Controls.Add(this.telefono);
-            this.Controls.Add(this.dni);
+            this.Controls.Add(this.direccionCliente);
+            this.Controls.Add(this.telfCliente);
+            this.Controls.Add(this.dniCliente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.apellido2);
-            this.Controls.Add(this.apellido1);
+            this.Controls.Add(this.apellido2Cliente);
+            this.Controls.Add(this.apellido1Cliente);
             this.Controls.Add(this.nombreCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -447,19 +447,19 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox nombreCliente;
-        private System.Windows.Forms.TextBox apellido1;
-        private System.Windows.Forms.TextBox apellido2;
+        private System.Windows.Forms.TextBox apellido1Cliente;
+        private System.Windows.Forms.TextBox apellido2Cliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox dni;
-        private System.Windows.Forms.TextBox telefono;
-        private System.Windows.Forms.TextBox direccion;
+        private System.Windows.Forms.TextBox dniCliente;
+        private System.Windows.Forms.TextBox telfCliente;
+        private System.Windows.Forms.TextBox direccionCliente;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox emailCliente;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox usuario;
-        private System.Windows.Forms.TextBox password;
+        private System.Windows.Forms.TextBox usuarioCliente;
+        private System.Windows.Forms.TextBox passwordCliente;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button registrar;
         private System.Windows.Forms.Label label3;

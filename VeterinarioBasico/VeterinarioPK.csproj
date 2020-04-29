@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>VeterinarioBasico</RootNamespace>
     <AssemblyName>VeterinarioBasico</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +73,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="VentanaAgregarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaAgregarMascota.Designer.cs">
+      <DependentUpon>VentanaAgregarMascota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaGestionCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaGestionCita.Designer.cs">
+      <DependentUpon>VentanaGestionCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="VentanaNuevaCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +123,12 @@
     <Compile Include="VentanaRegistro.Designer.cs">
       <DependentUpon>VentanaRegistro.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VentanaAgregarMascota.resx">
+      <DependentUpon>VentanaAgregarMascota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaGestionCita.resx">
+      <DependentUpon>VentanaGestionCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaNuevaCita.resx">
       <DependentUpon>VentanaNuevaCita.cs</DependentUpon>
     </EmbeddedResource>

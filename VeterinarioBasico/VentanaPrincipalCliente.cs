@@ -46,24 +46,26 @@ namespace VeterinarioBasico
             return (Image.FromStream(ms));
         }
 
+        //Método para el TABCONTROL "Mi perfil"
         private void muestraDatosCliente()
         {
             misDatos = conexion.datosCliente(usuarioLogin);
             nombre.Text = misDatos.Rows[0]["nombreCliente"].ToString();
             pictureBox1.Image = convierteBlobAImagen((byte[])misDatos.Rows[0]["imagenCliente"]);
-            apellido1.Text = misDatos.Rows[0]["apellido1"].ToString();
-            apellido2.Text = misDatos.Rows[0]["apellido2"].ToString();
-            email.Text = misDatos.Rows[0]["email"].ToString();
-            direccion.Text = misDatos.Rows[0]["direccion"].ToString();
+            apellido1.Text = misDatos.Rows[0]["apellido1Cliente"].ToString();
+            apellido2.Text = misDatos.Rows[0]["apellido2Cliente"].ToString();
+            email.Text = misDatos.Rows[0]["emailCliente"].ToString();
+            direccion.Text = misDatos.Rows[0]["direccionCliente"].ToString();
         }
 
+        //Método para el TABCONTROL "Mi mascota"
         private void muestraDatosMascota()
         {
             miMascota = conexion.datosMascota(usuarioLogin);
             nombreMascota.Text = miMascota.Rows[0]["nombreMascota"].ToString();
-            tipoMascota.Text = miMascota.Rows[0]["tipo"].ToString();
-            razaMascota.Text = miMascota.Rows[0]["raza"].ToString();
-            fecNacMascota.Text = miMascota.Rows[0]["fecNacimiento"].ToString();
+            tipoMascota.Text = miMascota.Rows[0]["especieMascota"].ToString();
+            razaMascota.Text = miMascota.Rows[0]["razaMascota"].ToString();
+            fecNacMascota.Text = miMascota.Rows[0]["fecNacMascota"].ToString();
             pictureBox2.Image = convierteBlobAImagen((byte[])miMascota.Rows[0]["imagenMascota"]);
         }
 
@@ -74,15 +76,23 @@ namespace VeterinarioBasico
             MessageBox.Show("Suscripción realizada correctamente. Se enviará mensualmente nuestra revista a su domicilio.");
         }
 
+        //Botón que lleva a form para el pago. 
         private void button7_Click(object sender, EventArgs e)
         {
             VentanaPago v = new VentanaPago();
             v.Show();
         }
 
+        //Botón que lleva al form para nueva cita.
         private void button4_Click(object sender, EventArgs e)
         {
             VentanaNuevaCita v = new VentanaNuevaCita();
+            v.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            VentanaAgregarMascota v = new VentanaAgregarMascota();
             v.Show();
         }
     }

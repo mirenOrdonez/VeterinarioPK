@@ -62,9 +62,6 @@ namespace VeterinarioBasico
             v.Show();
         }
 
-        private void password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace VeterinarioBasico
 {
-    public partial class VentanaNuevaCita : Form
+    public partial class VentanaGestionCita : Form
     {
-        public VentanaNuevaCita()
+        public VentanaGestionCita()
         {
             InitializeComponent();
         }
 
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

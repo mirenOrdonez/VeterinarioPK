@@ -25,9 +25,12 @@ namespace VeterinarioBasico
             usuarioLogin = trabajadorQueHaceLogin;
             mostrarDatosTrabajador();
             dataGridView1.DataSource = conexion.buscarMascota();
+            dataGridView2.DataSource = conexion.citasTrabajador(trabajadorQueHaceLogin);
             //Para ajustar las dimensiones de la tabla
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 
         //Método para que se cierre la aplicación cuando se cierre la V.ppal
@@ -53,13 +56,21 @@ namespace VeterinarioBasico
             apellido2Trabajador.Text = misDatos.Rows[0]["apellido2Trabajador"].ToString();
         }
 
-        
+        //Muestra los datos de la mascota seleccionada en el buscador. 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             nombreMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["nombreMascota"].Value.ToString();
             pictureBox5.Image = convierteBlobAImagen((byte[])dataGridView1.Rows[e.RowIndex].Cells["imagenMascota"].Value);
-            edadMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["fecNacimiento"].Value.ToString();
-            razaMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["raza"].Value.ToString();
+            razaMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["razaMascota"].Value.ToString();
+            especieMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["especieMascota"].Value.ToString();
+            colorMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["colorMascota"].Value.ToString();
+            fecNacMascota.Text = dataGridView1.Rows[e.RowIndex].Cells["fecNacMascota"].Value.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            VentanaAgregarMascota v = new VentanaAgregarMascota();
+            v.Show();
         }
     }
 }

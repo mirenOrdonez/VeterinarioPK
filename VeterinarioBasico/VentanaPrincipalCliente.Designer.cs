@@ -47,9 +47,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.ultimaVisitaMascota = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.razaMascota = new System.Windows.Forms.Label();
             this.tipoMascota = new System.Windows.Forms.Label();
             this.fecNacMascota = new System.Windows.Forms.Label();
@@ -59,7 +56,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabControl1.SuspendLayout();
@@ -236,9 +232,6 @@
             this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.ultimaVisitaMascota);
-            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Controls.Add(this.razaMascota);
             this.tabPage2.Controls.Add(this.tipoMascota);
             this.tabPage2.Controls.Add(this.fecNacMascota);
@@ -269,7 +262,7 @@
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(81, 262);
+            this.button3.Location = new System.Drawing.Point(447, 186);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(202, 49);
             this.button3.TabIndex = 11;
@@ -278,7 +271,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
@@ -289,46 +282,13 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "AÑADIR MASCOTA";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(425, 262);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(296, 49);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "PEDIR CITA";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // ultimaVisitaMascota
-            // 
-            this.ultimaVisitaMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ultimaVisitaMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultimaVisitaMascota.Location = new System.Drawing.Point(596, 188);
-            this.ultimaVisitaMascota.Name = "ultimaVisitaMascota";
-            this.ultimaVisitaMascota.Size = new System.Drawing.Size(241, 47);
-            this.ultimaVisitaMascota.TabIndex = 8;
-            this.ultimaVisitaMascota.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(311, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(241, 47);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Última visita:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // razaMascota
             // 
             this.razaMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.razaMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.razaMascota.Location = new System.Drawing.Point(596, 126);
+            this.razaMascota.Location = new System.Drawing.Point(558, 126);
             this.razaMascota.Name = "razaMascota";
             this.razaMascota.Size = new System.Drawing.Size(241, 47);
             this.razaMascota.TabIndex = 6;
@@ -348,7 +308,7 @@
             // 
             this.fecNacMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.fecNacMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecNacMascota.Location = new System.Drawing.Point(596, 64);
+            this.fecNacMascota.Location = new System.Drawing.Point(558, 64);
             this.fecNacMascota.Name = "fecNacMascota";
             this.fecNacMascota.Size = new System.Drawing.Size(241, 47);
             this.fecNacMascota.TabIndex = 4;
@@ -379,7 +339,6 @@
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Controls.Add(this.pictureBox5);
             this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.ForeColor = System.Drawing.Color.White;
             this.tabPage3.ImageIndex = 0;
@@ -392,6 +351,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(355, 168);
             this.dataGridView1.Name = "dataGridView1";
@@ -410,31 +370,17 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.button1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(378, 582);
+            this.button1.Location = new System.Drawing.Point(518, 454);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(414, 50);
             this.button1.TabIndex = 4;
             this.button1.Text = "GESTIONAR CITA";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(378, 654);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(414, 50);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "NUEVA CITA";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -496,13 +442,9 @@
         private System.Windows.Forms.Label apellido1;
         private System.Windows.Forms.Label nombre;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label apellido2;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label ultimaVisitaMascota;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label razaMascota;
         private System.Windows.Forms.Label tipoMascota;
         private System.Windows.Forms.Label fecNacMascota;
