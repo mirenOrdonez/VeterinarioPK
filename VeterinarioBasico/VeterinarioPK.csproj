@@ -79,18 +79,6 @@
     <Compile Include="VentanaAgregarMascota.Designer.cs">
       <DependentUpon>VentanaAgregarMascota.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentanaGestionCita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentanaGestionCita.Designer.cs">
-      <DependentUpon>VentanaGestionCita.cs</DependentUpon>
-    </Compile>
-    <Compile Include="VentanaNuevaCita.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentanaNuevaCita.Designer.cs">
-      <DependentUpon>VentanaNuevaCita.cs</DependentUpon>
-    </Compile>
     <Compile Include="VentanaPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,12 +113,6 @@
     </Compile>
     <EmbeddedResource Include="VentanaAgregarMascota.resx">
       <DependentUpon>VentanaAgregarMascota.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentanaGestionCita.resx">
-      <DependentUpon>VentanaGestionCita.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentanaNuevaCita.resx">
-      <DependentUpon>VentanaNuevaCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPago.resx">
       <DependentUpon>VentanaPago.cs</DependentUpon>

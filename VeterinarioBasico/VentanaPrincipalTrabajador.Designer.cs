@@ -37,7 +37,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.apellido2Trabajador = new System.Windows.Forms.Label();
             this.apellido1Trabajador = new System.Windows.Forms.Label();
             this.nombreTrabajador = new System.Windows.Forms.Label();
@@ -56,7 +55,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,7 +80,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.pictureBox2);
@@ -90,7 +87,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 39);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1380, 723);
+            this.tabPage2.Size = new System.Drawing.Size(1381, 723);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Citas";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -129,45 +126,34 @@
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.Controls.Add(this.pictureBox3);
-            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.apellido2Trabajador);
             this.tabPage1.Controls.Add(this.apellido1Trabajador);
             this.tabPage1.Controls.Add(this.nombreTrabajador);
             this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.ImageIndex = 1;
             this.tabPage1.Location = new System.Drawing.Point(4, 39);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1380, 723);
+            this.tabPage1.Size = new System.Drawing.Size(1381, 723);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Mi perfil";
+            this.tabPage1.Text = "Mi perfil ";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::VeterinarioBasico.Properties.Resources.logovet;
-            this.pictureBox3.Location = new System.Drawing.Point(868, 569);
+            this.pictureBox3.Location = new System.Drawing.Point(448, 559);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(504, 146);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button1.Location = new System.Drawing.Point(545, 460);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Correo";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // apellido2Trabajador
             // 
             this.apellido2Trabajador.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.apellido2Trabajador.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido2Trabajador.Location = new System.Drawing.Point(681, 390);
+            this.apellido2Trabajador.Location = new System.Drawing.Point(695, 446);
             this.apellido2Trabajador.Name = "apellido2Trabajador";
             this.apellido2Trabajador.Size = new System.Drawing.Size(144, 36);
             this.apellido2Trabajador.TabIndex = 4;
@@ -177,7 +163,7 @@
             // 
             this.apellido1Trabajador.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.apellido1Trabajador.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellido1Trabajador.Location = new System.Drawing.Point(545, 390);
+            this.apellido1Trabajador.Location = new System.Drawing.Point(559, 446);
             this.apellido1Trabajador.Name = "apellido1Trabajador";
             this.apellido1Trabajador.Size = new System.Drawing.Size(140, 36);
             this.apellido1Trabajador.TabIndex = 3;
@@ -187,7 +173,7 @@
             // 
             this.nombreTrabajador.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.nombreTrabajador.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTrabajador.Location = new System.Drawing.Point(587, 328);
+            this.nombreTrabajador.Location = new System.Drawing.Point(601, 384);
             this.nombreTrabajador.Name = "nombreTrabajador";
             this.nombreTrabajador.Size = new System.Drawing.Size(202, 36);
             this.nombreTrabajador.TabIndex = 2;
@@ -195,7 +181,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(545, 64);
+            this.pictureBox1.Location = new System.Drawing.Point(559, 120);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(280, 230);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,14 +193,13 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImageList = this.imageList1;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1388, 766);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControl1.Size = new System.Drawing.Size(1389, 766);
+            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage3
@@ -236,10 +221,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 39);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tabPage3.Size = new System.Drawing.Size(1380, 723);
+            this.tabPage3.Size = new System.Drawing.Size(1381, 723);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Buscador";
+            this.tabPage3.Text = "Buscador   ";
             // 
             // button5
             // 
@@ -366,20 +350,6 @@
             this.label3.TabIndex = 25;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button2.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(487, 428);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(414, 50);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "GESTIONAR CITA";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // VentanaPrincipalTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,7 +382,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label apellido2Trabajador;
         private System.Windows.Forms.Label apellido1Trabajador;
         private System.Windows.Forms.Label nombreTrabajador;
@@ -435,6 +404,5 @@
         private System.Windows.Forms.Label fecNacMascota;
         private System.Windows.Forms.Label colorMascota;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button2;
     }
 }

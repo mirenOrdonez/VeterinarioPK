@@ -262,6 +262,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Name = "VentanaAgregarMascota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaAgregarMascota";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

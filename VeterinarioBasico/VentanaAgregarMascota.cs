@@ -20,13 +20,13 @@ namespace VeterinarioBasico
 
         private void registrar_Click(object sender, EventArgs e)
         {
-            //if (conexion.registraMascota(nombreMascota.Text, especieMascota.Text, razaMascota.Text,
-            //    colorMascota.Text, fecNacMascota.Text))
-            //{
+            if (conexion.registraMascota(nombreMascota.Text, especieMascota.Text, razaMascota.Text,
+                colorMascota.Text, fecNacMascota.Text))
+            {
 
-            //    MessageBox.Show("Registro completado.");
-            //    this.Hide();
-            //}
+                MessageBox.Show("Registro completado.");
+                this.Hide();
+            }
         }
     }
 }

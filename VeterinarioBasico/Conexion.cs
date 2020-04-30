@@ -235,7 +235,7 @@ namespace VeterinarioBasico
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("SELECT DATE_FORMAT(fechaConsulta, '%d-%m-%Y') as Fecha, " +
+                MySqlCommand consulta = new MySqlCommand("SELECT mc.idConsulta, DATE_FORMAT(fechaConsulta, '%d-%m-%Y') as Fecha, " +
                     "TIME_FORMAT(horaConsulta, '%H:%i') as Hora FROM mascota_consulta as mc, consulta_trabajador as ct " +
                     "WHERE ct.dniTrabajador = (SELECT dniTrabajador FROM trabajador WHERE usuarioTrabajador = @usuarioTrabajador) " +
                     "AND mc.idConsulta = ct.idConsulta AND mc.fechaConsulta >= CURRENT_DATE ORDER BY mc.fechaConsulta", conexion);
@@ -253,31 +253,33 @@ namespace VeterinarioBasico
         }
 
         //Registro nueva mascota
-        //public Boolean registraMascota(String nombreMascota, String especieMascota, String razaMascota,
-        //                String colorMascota, String fecNacMascota)
-        //{
-        //    try
-        //    {
-        //        conexion.Open();
-        //        MySqlCommand consulta = new MySqlCommand("INSERT INTO mascota (nombreMascota," +
-        //            "especieMascota, razaMascota, colorMascota, fecNacMascota) VALUES (@nombreMascota," +
-        //            "@especieMascota, @razaMascota, @colorMascota, @fecNacMascota)", conexion);
-        //        consulta.Parameters.AddWithValue("@nombreMascota", nombreMascota);
-        //        consulta.Parameters.AddWithValue("@especieMascota", especieMascota);
-        //        consulta.Parameters.AddWithValue("@razaMascota", razaMascota);
-        //        consulta.Parameters.AddWithValue("@colorMascota", colorMascota);
-        //        consulta.Parameters.AddWithValue("@fecNacMascota", fecNacMascota);
+        public Boolean registraMascota(String nombreMascota, String especieMascota, String razaMascota,
+                        String colorMascota, String fecNacMascota)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO mascota (nombreMascota," +
+                    "especieMascota, razaMascota, colorMascota, fecNacMascota) VALUES (@nombreMascota," +
+                    "@especieMascota, @razaMascota, @colorMascota, @fecNacMascota)", conexion);
+                consulta.Parameters.AddWithValue("@nombreMascota", nombreMascota);
+                consulta.Parameters.AddWithValue("@especieMascota", especieMascota);
+                consulta.Parameters.AddWithValue("@razaMascota", razaMascota);
+                consulta.Parameters.AddWithValue("@colorMascota", colorMascota);
+                consulta.Parameters.AddWithValue("@fecNacMascota", fecNacMascota);
 
-        //        consulta.ExecuteNonQuery();
+                consulta.ExecuteNonQuery();
 
-        //        conexion.Close();
-        //        return true;
-        //    }
-        //    catch (MySqlException e)
-        //    {
-        //        return false;
-        //    }
-        //}
+                conexion.Close();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                return false;
+            }
+        }
+
+
 
     }
 

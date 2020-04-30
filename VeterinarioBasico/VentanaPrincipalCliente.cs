@@ -27,8 +27,8 @@ namespace VeterinarioBasico
             muestraDatosCliente();
             muestraDatosMascota();
             dataGridView1.DataSource = conexion.citasCliente(clienteQueHaceLogin);
-            //Ajustar la tabla al contenido. 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            //Para ajustar las dimensiones de la tabla
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
 
         }
@@ -90,10 +90,17 @@ namespace VeterinarioBasico
             v.Show();
         }
 
+        //Abre FORM para agregar mascota.
         private void button5_Click(object sender, EventArgs e)
         {
             VentanaAgregarMascota v = new VentanaAgregarMascota();
             v.Show();
+        }
+
+        //Para las facturas.
+        private void button8_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Todavía no existe ningún pago realizado.");
         }
     }
 }

@@ -27,9 +27,9 @@ namespace VeterinarioBasico
             dataGridView1.DataSource = conexion.buscarMascota();
             dataGridView2.DataSource = conexion.citasTrabajador(trabajadorQueHaceLogin);
             //Para ajustar las dimensiones de la tabla
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
-            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
         }
 

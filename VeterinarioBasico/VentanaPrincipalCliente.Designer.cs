@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaPrincipalCliente));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -45,7 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.razaMascota = new System.Windows.Forms.Label();
             this.tipoMascota = new System.Windows.Forms.Label();
@@ -53,11 +51,11 @@
             this.nombreMascota = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,8 +64,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,7 +89,6 @@
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.button6);
             this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.button8);
@@ -109,17 +106,6 @@
             this.tabPage1.Size = new System.Drawing.Size(1380, 723);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mi perfil";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button6.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(165, 648);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(238, 34);
-            this.button6.TabIndex = 11;
-            this.button6.Text = "Editar perfil";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -153,6 +139,7 @@
             this.button8.TabIndex = 8;
             this.button8.Text = "FACTURAS";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -230,7 +217,6 @@
             // 
             this.tabPage2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage2.Controls.Add(this.pictureBox4);
-            this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button5);
             this.tabPage2.Controls.Add(this.razaMascota);
             this.tabPage2.Controls.Add(this.tipoMascota);
@@ -255,20 +241,6 @@
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(447, 186);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(202, 49);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "+ INFO";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
@@ -276,7 +248,7 @@
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
             this.button5.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(1053, 64);
+            this.button5.Location = new System.Drawing.Point(1003, 147);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(256, 72);
             this.button5.TabIndex = 10;
@@ -288,7 +260,7 @@
             // 
             this.razaMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.razaMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.razaMascota.Location = new System.Drawing.Point(558, 126);
+            this.razaMascota.Location = new System.Drawing.Point(592, 209);
             this.razaMascota.Name = "razaMascota";
             this.razaMascota.Size = new System.Drawing.Size(241, 47);
             this.razaMascota.TabIndex = 6;
@@ -298,7 +270,7 @@
             // 
             this.tipoMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.tipoMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoMascota.Location = new System.Drawing.Point(311, 126);
+            this.tipoMascota.Location = new System.Drawing.Point(345, 209);
             this.tipoMascota.Name = "tipoMascota";
             this.tipoMascota.Size = new System.Drawing.Size(241, 47);
             this.tipoMascota.TabIndex = 5;
@@ -308,7 +280,7 @@
             // 
             this.fecNacMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.fecNacMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fecNacMascota.Location = new System.Drawing.Point(558, 64);
+            this.fecNacMascota.Location = new System.Drawing.Point(592, 147);
             this.fecNacMascota.Name = "fecNacMascota";
             this.fecNacMascota.Size = new System.Drawing.Size(241, 47);
             this.fecNacMascota.TabIndex = 4;
@@ -318,7 +290,7 @@
             // 
             this.nombreMascota.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.nombreMascota.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreMascota.Location = new System.Drawing.Point(311, 64);
+            this.nombreMascota.Location = new System.Drawing.Point(345, 147);
             this.nombreMascota.Name = "nombreMascota";
             this.nombreMascota.Size = new System.Drawing.Size(241, 47);
             this.nombreMascota.TabIndex = 3;
@@ -326,7 +298,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(81, 64);
+            this.pictureBox2.Location = new System.Drawing.Point(117, 122);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(202, 171);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -337,8 +309,8 @@
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.label1);
             this.tabPage3.Controls.Add(this.pictureBox5);
-            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.ForeColor = System.Drawing.Color.White;
             this.tabPage3.ImageIndex = 0;
@@ -349,14 +321,17 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mis citas";
             // 
-            // dataGridView1
+            // label1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(355, 168);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(710, 228);
-            this.dataGridView1.TabIndex = 12;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(355, 419);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(710, 49);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Para gestionar una cita ya existente, o para concertar una nueva cita, por favor," +
+    " póngase en contacto con nosotros llamando al 910 884 881. Gracias.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox5
             // 
@@ -367,20 +342,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 11;
             this.pictureBox5.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(146)))), ((int)(((byte)(195)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MistyRose;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MistyRose;
-            this.button1.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(518, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(414, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "GESTIONAR CITA";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -401,6 +362,15 @@
             this.imageList1.Images.SetKeyName(1, "icons8_customer_1.ico");
             this.imageList1.Images.SetKeyName(2, "icons8_dog.ico");
             this.imageList1.Images.SetKeyName(3, "icons8_dog_paw.ico");
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(359, 164);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(706, 170);
+            this.dataGridView1.TabIndex = 14;
             // 
             // VentanaPrincipalCliente
             // 
@@ -424,8 +394,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,12 +423,10 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
